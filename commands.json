@@ -1,0 +1,23 @@
+{ 
+  "auth"   : [{ "type" : "CMD" }],
+  "reauth" : [{ "type" : "CMD" }],
+  "su"     : [{ 
+                "type" : "UCTL",
+                "opts" : [ "--list", "--help" ]
+             }],
+  "goto"   : [{
+                "type" : "DCTL",
+                "opts" : [ "google-drive", "google-photos", "--help" ]
+             }],
+  "get"    : [{
+                "type" : "CFCTL",
+                "opts" : [ "--id",   "--force", "--help" ]
+             }],
+  "put"    : [{
+                "type" : "FCTL",
+                "opts" : [ "--find", "--rmsrc", "--help" ]
+             }],
+  "uname"  : [{ "type" : "CMD" }],
+  "xplore" : [{ "type" : "CMD" }]
+}
+

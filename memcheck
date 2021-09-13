@@ -1,0 +1,7 @@
+#!/bin/bash
+
+valgrind --show-leak-kinds=all      \
+         --track-origins=yes        \
+         --show-reachable=yes       \
+         --leak-check=full          \
+         ./shell $@
