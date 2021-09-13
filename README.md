@@ -11,7 +11,8 @@ Auto complete shell command line on TAB key press with GNU readline library.
 { command-name : [{
                     "type" : "command-type",
                     "opts" : [ "option1", "option2", "option3" ]
-                 }}
+                 }]
+}
 ```
 ```
 Types: CMD   - Standalone Commands (no options)
