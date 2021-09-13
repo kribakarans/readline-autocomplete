@@ -1,4 +1,4 @@
-//https://github.com/georgebrock/readline-example/blob/master/main.c
+// Based on https://github.com/georgebrock/readline-example/blob/master/main.c
 
 #define _GNU_SOURCE
 
