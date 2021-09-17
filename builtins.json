@@ -319,16 +319,16 @@
 			"usage" : [
 						"Usage: ls [OPTION]... FILE...",
 						"List file/directory contents",
-						"       -a  --alpha     -- List files in alphabetical order",
-						"       -b  --bin       -- List all files in the recycle bin",
-						"       -d  --dirent    -- List directories in current path",
-						"       -i  --id        -- Input is unique file identifier",
-						"       -l  --long      -- Long listing format",
-						"       -R  --reverse   -- Print files in reverse list",
-						"       -r  --recursive -- Recursively list files",
-						"       -s  --size      -- Sort files with respect to size of the file",
-						"       -t  --time      -- Sort files with respect to create time of file",
-						"       -h  --help      -- Print this help menu"
+						"    -a  --alpha     -- List files in alphabetical order",
+						"    -b  --bin       -- List all files in the recycle bin",
+						"    -d  --dirent    -- List directories in current path",
+						"    -i  --id        -- Input is unique file identifier",
+						"    -l  --long      -- Long listing format",
+						"    -R  --reverse   -- Print files in reverse list",
+						"    -r  --recursive -- Recursively list files",
+						"    -s  --size      -- Sort files with respect to size of the file",
+						"    -t  --time      -- Sort files with respect to create time of file",
+						"    -h  --help      -- Print this help menu"
 			]
 		},
 		{
@@ -616,8 +616,8 @@
 						"Usage: su [OPTION]... [USERNAME]",
 						"Swith user to login Kloudshell.",
 						"Options:",
-						"  -l  --list  -- List connected users",
-						"  -h  --help  -- Print this message"
+						"    -l  --list  -- List connected users",
+						"    -h  --help  -- Print this message"
 			]
 		}
 	},
@@ -667,11 +667,11 @@
 						"Usage: user [OPTION]... [USERNAME]...",
 						"Manage Kloudshell users. Create, update and delete Kloudshell users.",
 						"Options:",
-						"  -a  --add     -- Add new user and athorize",
-						"  -r  --remove  -- Remove user to access Kloudshell",
-						"  -u  --update  -- Update/refresh user access to Kloudshell",
-						"  -l  --list    -- List locally connected Kloudshell users",
-						"  -h  --help    -- Print this message"
+						"    -a  --add     -- Add new user and athorize",
+						"    -r  --remove  -- Remove user to access Kloudshell",
+						"    -u  --update  -- Update/refresh user access to Kloudshell",
+						"    -l  --list    -- List locally connected Kloudshell users",
+						"    -h  --help    -- Print this message"
 			]
 		}
 	},
