@@ -1,0 +1,714 @@
+{
+	"__program__" : "Kloudshell builtin command line interface",
+
+	"auth" : {
+		"type" : "UCTL",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "auth-user",
+			"opts" : [ "--help" ],
+			"help" : [
+						"Usage: auth <user-name>",
+						"Athorisze user to access kloudshell resourses."
+			]
+		}
+	},
+	"about" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "about-domain",
+			"opts" : [ "--help" ],
+			"help" : [
+						"Usage: about [OPTION]...",
+						"Athorisze user to access kloudshell resourses."
+			]
+		}
+	},
+	"cat" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos",
+			"handler" : "cat-file",
+			"opts" : [ "--id", "--recursive", "--help" ],
+			"help" : [
+						"Usage: cat [OPTION]... FILE...",
+						"Concatenate files and print on the standard output.",
+						"Options:",
+						"    *|.              -- Concatenate and print all files in current directory",
+						"    -r  --recursive  -- Recursively Concatenate and print files",
+						"    -i  --id         -- Input is unique file identifier",
+						"    -h  --help       -- Print this help menu"
+			]
+		}
+	},
+	"cat-configs" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "cat-configs",
+			"opts" : [ "--help" ],
+			"help" : [
+						"Usage: cat-configs",
+						"Print Kloudshell start-up configuration in the console."
+			]
+		}
+	},
+	"cd" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "change-directory",
+			"opts" : [ "--id", "--jump", "--help" ],
+			"help" : [
+						"Usage: cd [OPTION]... FILE...",
+						"Change Kloudshell working directory",
+						"Options:",
+						"    -i  --id   <file-id>  -- Change to the specified directory",
+						"    -j  --jump <file-id>  -- Jump to specified directory irrespective of current path",
+						"    -h  --help            -- Print this help menu"
+			]
+		}
+	},
+	"clear" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "clear-tool",
+			"opts" : [ "--cache", "--history", "--temp", "--help" ],
+			"help" : [
+						"Usage: clear: [OPTION]...",
+						"Clear Kloudshell temporary data and command line histories",
+						"Options:",
+						"    -H  --history  - Delete kloudshell command history",
+						"    -c  --cache    - Permanently delete cached files",
+						"    -t  --temp     - Permanently delete temp files",
+						"    -h  --help     - Show this menu"
+			]
+		}
+	},
+	"cp" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "copy-file",
+			"opts" : [ "--id", "--recursive", "--help" ],
+			"help" : [
+						"Usage: cp [OPTION]... SOURCE DEST",
+						"   or: cp [OPTION]... SOURCE... DIRECTORY",
+						"   or: cp [OPTION]... DIRECTORY SOURCE...",
+						"Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY",
+						"Options:",
+						"    *|.             -- Copy of all files in current directory to destination",
+						"    -i  --id        -- Input is unique file identifier",
+						"    -r  --recursive -- Recursively copy files",
+						"    -h  --help      -- Print this help menu"
+			]
+		}
+	},
+	"curl" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "exec-curl",
+			"opts" : [ "--help" ],
+			"help" : [
+						"Usage: curl [type=GET|POST|PATCH...] [QUERY...]",
+						"Run Kloudshell REST API callS from terminal"
+			]
+		}
+	},
+	"debug" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "debug-kloudshell",
+			"opts" : [ "--enable", "--disable", "--curl", "--oauth", "--verbose", "--help" ],
+			"help" : [
+						"Usage: debug [OPTION]...",
+						"Kloudshell debug options:",
+						"    -e  --enable   -- Enable console debugging session",
+						"    -d  --disable  -- Disable console debugging session",
+						"    -c  --curl     -- Debug cURL sessions",
+						"    -o  --oauth    -- Debug oAuth activities",
+						"    -v  --verbose  -- Enable verbose console debugging",
+						"    -h  --help     -- Show this menu."
+			]
+		}
+	},
+	"delete" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos",
+			"handler" : "delete-file",
+			"opts" : [ "--id", "--recursive", "--help" ],
+			"help" : [
+						"Usage: delete [OPTION]... FILE...",
+						"Delete file(s) permanently from current domain.",
+						"Options:",
+						"    *|.              -- Delete all files in current directory",
+						"    -r  --recursive  -- Recursively delete files",
+						"    -i  --id         -- Input is unique file identifier",
+						"    -h  --help       -- Print this help menu"
+			]
+		}
+	},
+	"edit-configs" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "edit-configs",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: edit-configs",
+						"Edit Kloudshell start-up configurations"
+			]
+		}
+	},
+	"exec" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "exec-file",
+			"opts" : [ "--id", "--help" ],
+			"help" : [
+						"Usage: exec FILE...",
+						"Execute files in local system.",
+						"Options:",
+						"    -i  --id    -- Input is unique file identifier",
+						"    -h  --help  -- Print this help menu"
+			]
+		}
+	},
+	"find" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos",
+			"handler" : "find-file",
+			"opts" : [ "--help" ],
+			"help" : [
+						"Usage: find [OPTION]... FILE...",
+						"Find files in current domain."
+			]
+		}
+	},
+	"get" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "get-file",
+			"opts" : [ "--force", "--id", "--recursive", "--rmsrc", "--thumbnail", "--help" ],
+			"help" : [
+						"Usage: get [OPTION]... FILE...",
+						"Download file(s) from google drive.",
+						"Options:",
+						"    *|.              -- Download all files in current directory",
+						"    -f  --force      -- Force download files without checksum validation",
+						"    -R  --rmsrc      -- Remove source file after downloads",
+						"    -r  --recursive  -- Recursively download files",
+						"    -t  --thumbnail  -- Try to download file's thumbnails",
+						"    -i  --id         -- Input is unique file identifier",
+						"    -h  --help       -- Print this help menu"
+			]
+		},
+		{
+			"name" : "google-photos",
+			"handler" : "get-file",
+			"opts" : [  "--album", "--debug", "--id", "--force", "--rmsrc", "--thumbnail", "--help" ],
+			"help" : [
+						"Usage: get [OPTION]... FILE...",
+						"Download file(s) from google photos.",
+						"Options:",
+						"    *|.              -- Download all medias from google-photo library",
+						"    -f  --force      -- Force download files without checksum validation",
+						"    -R  --rmsrc      -- Remove source file after downloads",
+						"    -t  --thumbnail  -- Try to download file's thumbnails",
+						"    -i  --id         -- Input is unique file identifier",
+						"    -h  --help       -- Print this help menu"
+			]
+		}
+	},
+	"goto" : {
+		"type" : "DCTL",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "goto-domain",
+			"opts" : [ "google-drive", "google-photos", "google-mail", "google-contacts", "kloudshell", "--help" ],
+			"help" : [
+						"goto: [DOMAIN NAME]...",
+						"Goto to below listed cloud-platforms",
+						"Supported cloud platforms:",
+						"    kloudshell       -- offline local shell",
+						"    google-drive     -- goto Google Drive",
+						"    google-photos    -- goto Google Photos",
+						"    google-contacts  -- goto Google Contacts",
+						"    google-mail      -- goto Google Mail",
+						"    --help           -- Show this menu"
+			]
+		}
+	},
+	"help" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "print-help",
+			"opts" : [ null ],
+			"help" : [
+				"Print Kloudshell usage guidelines."
+			]
+		}
+	},
+	"history" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "kloudshell-history",
+			"opts" : [ "--list", "--clear", "--help" ],
+			"help" : [
+						"Usage: history [OPTION]...",
+						"Manage kloudshell command line history", 
+						"Options:",
+						"    -l  --list   -- List kloudshell command history",
+						"    -c  --clear  -- Clear kloudshell command history",
+						"    -h  --help   -- Print this help menu"
+			]
+		}
+	},
+	"knote" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "kloudshell-notes",
+			"opts" : [ "--edit", "--file", "--open", "--help" ],
+			"help" : [
+						"Usage: knote [OPTION]... FILE...",
+						"Create and Edit Kloudshell notes.",
+						"Options:",
+						"    -e  --edit  -- Edit note has filename FILE",
+						"    -o  --open  -- Open note with external text editor",
+						"    -f  --file  -- Save notes with user specifed filename",
+						"    -h  --help  -- Print this help menu"
+			]
+		}
+	},
+	"lite" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "toggle-litemode",
+			"opts" : [ "on", "off", "--help" ],
+			"help" : [
+						"Usage: lite [OPTION]...",
+						"Enable or disable lite mode.",
+						"Options:",
+						"     on   -- Enable lite mode",
+						"     off  -- Disable lite mode",
+						"   --help -- Print this message"
+			]
+		}
+	},
+	"ls" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name"  : "google-drive",
+			"handler" : "list-file",
+			"opts"  : [
+						 "--alpha", "--bin", "dirent", "--help", "--id", "--long",
+						 "--recursive", "--reverse", "--size", "--time"
+			],
+			"usage" : [
+						"Usage: ls [OPTION]... FILE...",
+						"List file/directory contents",
+						"       -a  --alpha     -- List files in alphabetical order",
+						"       -b  --bin       -- List all files in the recycle bin",
+						"       -d  --dirent    -- List directories in current path",
+						"       -i  --id        -- Input is unique file identifier",
+						"       -l  --long      -- Long listing format",
+						"       -R  --reverse   -- Print files in reverse list",
+						"       -r  --recursive -- Recursively list files",
+						"       -s  --size      -- Sort files with respect to size of the file",
+						"       -t  --time      -- Sort files with respect to create time of file",
+						"       -h  --help      -- Print this help menu"
+			]
+		},
+		{
+			"name"  : "google-photos",
+			"handler" : "list-file",
+			"opts"  : [ "--album", "--alpha", "--archived", "--bin", "--id", "--long",
+			            "--reverse", "--size", "--shared", "--time", "--help" ],
+			"usage" : [
+						"Usage: ls [OPTION]... FILE...",
+						"List google photo libraries.",
+						"Options:",
+						"    -a  --album     -- List user photo albums",
+						"    -A  --alpha     -- Sort files with respect to alphabetical order",
+						"    -x  --archived  -- List archived file contets",
+						"    -b  --bin       -- List all files in recycle bin",
+						"    -i  --id        -- List by file/album identifier",
+						"    -l  --long      -- Long listing format",
+						"    -R  --reverse   -- Print files in reverse list",
+						"    -S  --size      -- Sort files with respect to size of the file",
+						"    -s  --shared    -- List shared file contets",
+						"    -t  --time      -- Sort files with respect to create time of file",
+						"    -h  --help      -- Print this help menu"
+			]
+		},
+		{
+			"name"  : "google-mail",
+			"handler" : "list-file",
+			"opts"  : [ "--draft", "--id", "--label", "--long", "--thread", "--sent", "--spam", "--trash", "--help" ],
+			"usage" : [
+						"Usage: ls [OPTION]... MESSAGE_ID...",
+						"List google mail threads.",
+						"Options:",
+						"    -d  --draft   -- List drafts",
+						"    -i  --id      -- List by thread/message id",
+						"    -f  --label   -- List mails in specified labels",
+						"    -l  --long    -- Long listing format",
+						"    -t  --thread  -- List mail threads",
+						"    -s  --sent    -- List sent mails",
+						"    -m  --spam    -- List spam mails",
+						"    -b  --trash   -- List trashed mails",
+						"    -h  --help    -- Print this help menu"
+			]
+		}
+	},
+	"mkdir" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "make-directory",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: mkdir [OPTION]... DIRECTORY...",
+						"Create the DIRECTORY, if they do not already exist."
+			]
+		}
+	},
+	"mkoffline" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-drive",
+			"handler" : "make-offline",
+			"opts" : [ "--id", "--recursive", "--help" ],
+			"help" : [
+						"Usage: mkoffline [OPTION]... FILE...",
+						"Keep copy of Kloudshell file offline.",
+						"Options:",
+						"    *|.             -- Keep offline copy of files in current directory",
+						"    -r  --recursive -- Recursively download files and keep offline copy",
+						"    -i  --id        -- Input is unique file identifier",
+						"    -h  --help      -- Print this help menu"
+			]
+		}
+	},
+	"mv" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "move-file",
+			"opts" : [ "--id", "--recursive", "--help" ],
+			"help" : [
+						"Usage: mv [OPTION]... SOURCE DEST",
+						"  or:  mv [OPTION]... SOURCE... DIRECTORY",
+						"  or:  mv [OPTION]... DIRECTORY SOURCE...",
+						"Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.",
+						"Options:",
+						"    *|.             -- Move all files/directory to the destination",
+						"    -i  --id        -- Input is unique file identifier",
+						"    -r  --recursive -- Recursively move files",
+						"    -h  --help      -- Print this help menu"
+			]
+		}
+	},
+	"play" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos",
+			"handler" : "play-file",
+			"opts" : [ "--id", "--help" ],
+			"help" : [
+						"Usage: play [OPTION]... FILE...",
+						"Play cloud files with suitable decoders.",
+						"Options:",
+						"    *|.             -- Play all files in current directory",
+						"    -i  --id        -- Input is unique file identifier",
+						"    -r  --recursive -- Recursively play files",
+						"    -t  --thumbnail -- Try to play file's thumbnails",
+						"    -h  --help      -- Print this help menu"
+			]
+		}
+	},
+	"printenv" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "print-environment",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: printenv [OPTION]... [VARIABLE]...",
+						"Print the values of the specified environment VARIABLE(s).",
+						"If no VARIABLE is specified, print name and value pairs for them all."
+			]
+		}
+	},
+	"put" : {
+		"type" : "LFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos",
+			"handler" : "put-file",
+			"opts" : [ "--find", "--recursive", "--help"  ],
+			"help" : [
+						"Usage: put [OPTION]... FILE...",
+						"Upload file/directories to google-drive",
+						"Options:",
+						"    -r  --recursive  -- Recursively upload files",
+						"    -f  --find       -- Find the file in the local system and start to upload",
+						"                        Find will search files from system user's HOME directory",
+						"    -h  --help       -- Print this help menu"
+			]
+		}
+	},
+	"pwd" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive",
+			"handler" : "print-working-directory",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: pwd",
+						"Print the name of the current working directory."
+			]
+		}
+	},
+	"qrencode" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos|google-contacts|google-mail",
+			"handler" : "print-qrcode",
+			"opts" : [ "--id", "--help" ],
+			"help" : [
+						"Usage: qrencode [OPTION]... [FILE]...",
+						"Print QRcode with meta-data of given file(s).",
+						"Options:",
+						"    *|.         -- Print QRcode of files in current directory",
+						"    -i  --id    -- Input is unique file identifier",
+						"    -h  --help  -- Print this help menu"
+			]
+		}
+	},
+	"reauth" : {
+		"type" : "UCTL",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "refresh-access-token",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: reauth [USERNAME]...",
+						"Refresh user access token."
+			]
+		}
+	},
+	"restart" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "restart-kloudshell",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: restart",
+						"Restart Kloudshell program."
+			]
+		}
+	},
+	"restore" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos",
+			"handler" : "restore-file",
+			"opts" : [ "--id", "--help" ],
+			"help" : [
+						"Usage: restore [OPTION]... [FILE]...",
+						"Restore file(s) from Trash directory.",
+						"Options:",
+						"    *|.         -- Restore all files from Trash where parent is current directory",
+						"    -i  --id    -- Input is unique file identifier",
+						"    -h  --help  -- Print this help menu"
+			]
+		}
+	},
+	"rm" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos",
+			"handler" : "remove-file",
+			"opts" : [ "--id", "--help" ],
+			"help" : [
+						"Usage: rm [OPTION]... [FILE]...",
+						"Remove the file(s).",
+						"Options:",
+						"    *|.         -- Remove all files in current directory",
+						"    -i  --id    -- Input is unique file identifier",
+						"    -h  --help  -- Print this help menu"
+			]
+		}
+	},
+	"sh" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "start-shell",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: shell [SYSTEM-COMMANDS]...",
+						"Run standard Linux commands from Kloudshell terminal."
+			]
+		}
+	},
+	"shell" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "start-shell",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: shell [SYSTEM-COMMANDS]...",
+						"Run standard Linux commands from Kloudshell terminal."
+			]
+		}
+	},
+	"sqlite" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "start-sqlite-shell",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: sqlite [OPTION]...",
+						"Login to Kloudshell database to access raw data."
+			]
+		}
+	},
+	"stat" : {
+		"type" : "CFCTL",
+		"domain" : {
+			"name" : "google-drive|google-photos",
+			"handler" : "stat-file",
+			"opts" : [ "--id", "--global", "--verbose", "--help" ],
+			"help" : [
+						"Usage: stat [OPTION]... FILE...",
+						"Display Kloudshell file status.",
+						"Options:",
+						"    -i  --id       -- Stat file with unique file identifier",
+						"    -g  --global   -- Stat anyfile anywhere irresptive of current path",
+						"    -v  --verbose  -- Raw file stat provided by google-drive-api",
+						"    -h  --help     -- Print this help menu"
+			]
+		}
+	},
+	"su" : {
+		"type" : "UCTL",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "switch-user",
+			"opts" : [ "--list", "--help" ],
+			"help" : [
+						"Usage: su [OPTION]... [USERNAME]",
+						"Swith user to login Kloudshell.",
+						"Options:",
+						"  -l  --list  -- List connected users",
+						"  -h  --help  -- Print this message"
+			]
+		}
+	},
+	"sync" : {
+		"type" : "DCTL",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "sync-domain",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: tokeninfo [OPTION]...",
+						"Print user access details to Kloudshell services."
+			]
+		}
+	},
+	"tokeninfo" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "print-token-info",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: tokeninfo [OPTION]...",
+						"Print user access details to Kloudshell services."
+			]
+		}
+	},
+	"uname" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "print-username",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: uname [OPTION]...",
+						"Show who is connected to the Kloudshell."
+			]
+		}
+	},
+	"user" : {
+		"type" : "UCTL",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "kloudshell-user",
+			"opts" : [ "--add", "--remove", "--update", "--list", "--help" ],
+			"help" : [
+						"Usage: user [OPTION]... [USERNAME]...",
+						"Manage Kloudshell users. Create, update and delete Kloudshell users.",
+						"Options:",
+						"  -a  --add     -- Add new user and athorize",
+						"  -r  --remove  -- Remove user to access Kloudshell",
+						"  -u  --update  -- Update/refresh user access to Kloudshell",
+						"  -l  --list    -- List locally connected Kloudshell users",
+						"  -h  --help    -- Print this message"
+			]
+		}
+	},
+	"version" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "print-version",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: version [OPTION]...",
+						"Print the Kloudshell package version."
+			]
+		}
+	},
+	"whoami" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "whoami",
+			"opts" : [ null ],
+			"help" : [
+						"Usage: whoami [OPTION]...",
+						"Print the user name associated with the current user ID."
+			]
+		}
+	},
+	"xplore" : {
+		"type" : "CMD",
+		"domain" : {
+			"name" : "kloudshell",
+			"handler" : "xplore",
+			"opts" : [ null ],
+			"help" : [
+				"Usage: xplore [OPTION]...",
+				"Explore Kloudshell downloaded files in program path."
+			]
+		}
+	}
+}
