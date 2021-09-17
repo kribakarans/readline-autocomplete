@@ -9,7 +9,7 @@
 			"opts" : [ "--help" ],
 			"help" : [
 						"Usage: auth <user-name>",
-						"Athorisze user to access kloudshell resourses."
+						"Athorize user to access kloudshell resourses."
 			]
 		}
 	},
@@ -21,7 +21,7 @@
 			"opts" : [ "--help" ],
 			"help" : [
 						"Usage: about [OPTION]...",
-						"Athorisze user to access kloudshell resourses."
+						"Athorize user to access kloudshell resources."
 			]
 		}
 	},
@@ -219,7 +219,7 @@
 						"Usage: get [OPTION]... FILE...",
 						"Download file(s) from google photos.",
 						"Options:",
-						"    *|.              -- Download all medias from google-photo library",
+						"    *|.              -- Download all media from google-photo library",
 						"    -f  --force      -- Force download files without checksum validation",
 						"    -R  --rmsrc      -- Remove source file after downloads",
 						"    -t  --thumbnail  -- Try to download file's thumbnails",
@@ -236,7 +236,7 @@
 			"opts" : [ "google-drive", "google-photos", "google-mail", "google-contacts", "kloudshell", "--help" ],
 			"help" : [
 						"goto: [DOMAIN NAME]...",
-						"Goto to below listed cloud-platforms",
+						"Go to to below listed cloud-platforms",
 						"Supported cloud platforms:",
 						"    kloudshell       -- offline local shell",
 						"    google-drive     -- goto Google Drive",
@@ -342,13 +342,13 @@
 						"Options:",
 						"    -a  --album     -- List user photo albums",
 						"    -A  --alpha     -- Sort files with respect to alphabetical order",
-						"    -x  --archived  -- List archived file contets",
+						"    -x  --archived  -- List archived file contents",
 						"    -b  --bin       -- List all files in recycle bin",
 						"    -i  --id        -- List by file/album identifier",
 						"    -l  --long      -- Long listing format",
 						"    -R  --reverse   -- Print files in reverse list",
 						"    -S  --size      -- Sort files with respect to size of the file",
-						"    -s  --shared    -- List shared file contets",
+						"    -s  --shared    -- List shared file contents",
 						"    -t  --time      -- Sort files with respect to create time of file",
 						"    -h  --help      -- Print this help menu"
 			]
@@ -381,7 +381,7 @@
 			"opts" : [ null ],
 			"help" : [
 						"Usage: mkdir [OPTION]... DIRECTORY...",
-						"Create the DIRECTORY, if they do not already exist."
+						"Create the DIRECTORY if it does not already exist."
 			]
 		}
 	},
@@ -667,7 +667,7 @@
 						"Usage: user [OPTION]... [USERNAME]...",
 						"Manage Kloudshell users. Create, update and delete Kloudshell users.",
 						"Options:",
-						"    -a  --add     -- Add new user and athorize",
+						"    -a  --add     -- Add new user and authorize",
 						"    -r  --remove  -- Remove user to access Kloudshell",
 						"    -u  --update  -- Update/refresh user access to Kloudshell",
 						"    -l  --list    -- List locally connected Kloudshell users",
