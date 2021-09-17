@@ -9,7 +9,7 @@
 			"opts" : [ "--help" ],
 			"help" : [
 						"Usage: auth <user-name>",
-						"Athorize user to access kloudshell resourses."
+						"Authorize user to access kloudshell resources."
 			]
 		}
 	},
@@ -21,7 +21,7 @@
 			"opts" : [ "--help" ],
 			"help" : [
 						"Usage: about [OPTION]...",
-						"Athorize user to access kloudshell resources."
+						"Authorize user to access kloudshell resources."
 			]
 		}
 	},
@@ -188,7 +188,7 @@
 			"opts" : [ "--help" ],
 			"help" : [
 						"Usage: find [OPTION]... FILE...",
-						"Find files in current domain."
+						"Find files in the current domain."
 			]
 		}
 	},
@@ -286,7 +286,7 @@
 						"Options:",
 						"    -e  --edit  -- Edit note has filename FILE",
 						"    -o  --open  -- Open note with external text editor",
-						"    -f  --file  -- Save notes with user specifed filename",
+						"    -f  --file  -- Save notes with user specified filename",
 						"    -h  --help  -- Print this help menu"
 			]
 		}
@@ -600,7 +600,7 @@
 						"Display Kloudshell file status.",
 						"Options:",
 						"    -i  --id       -- Stat file with unique file identifier",
-						"    -g  --global   -- Stat anyfile anywhere irresptive of current path",
+						"    -g  --global   -- Stat anyfile anywhere irrespective of current path",
 						"    -v  --verbose  -- Raw file stat provided by google-drive-api",
 						"    -h  --help     -- Print this help menu"
 			]
@@ -614,7 +614,7 @@
 			"opts" : [ "--list", "--help" ],
 			"help" : [
 						"Usage: su [OPTION]... [USERNAME]",
-						"Swith user to login Kloudshell.",
+						"Switch user to login Kloudshell.",
 						"Options:",
 						"    -l  --list  -- List connected users",
 						"    -h  --help  -- Print this message"
